@@ -1,0 +1,2 @@
+-- Entregable 0: Mini base de datos retail en SQL
+-- Proyecto inicial del portafolio Data Analyst Retail
