@@ -68,7 +68,21 @@ INSERT INTO ventas (id_cliente, id_producto, fecha_venta, cantidad) VALUES
 (1, 6, '2026-05-09', 5),
 (2, 4, '2026-05-10', 2);
 
--- 9. Consultar básicas
+-- 9. Modificar tabla ventas agregando método de pago
+ALTER TABLE ventas
+ADD metodo_pago VARCHAR(50);
+
+-- Actualizar el método de pago de las ventas registradas
+UPDATE ventas
+SET metodo_pago = 
+    CASE
+        WHEN id_venta IN (1, 3, 6) THEN 'Efectivo'
+        WHEN id_venta IN (5, 7,10) THEN 'Tarjeta'
+        WHEN id_venta IN (2, 4) THEN 'Transferencia'
+        WHEN id_venta IN (8, 9) THEN 'Nequi'
+    END;
+
+-- 10. Consultar básicas
 -- Consultar todos los productos
 SELECT * 
 FROM productos;
