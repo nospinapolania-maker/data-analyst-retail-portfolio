@@ -68,12 +68,42 @@ INSERT INTO ventas (id_cliente, id_producto, fecha_venta, cantidad) VALUES
 (1, 6, '2026-05-09', 5),
 (2, 4, '2026-05-10', 2);
 
--- 9. Consultar datos insertados
-SELECT * FROM clientes;
+-- 9. Consultar básicas
+-- Consultar todos los productos
+SELECT * 
+FROM productos;
 
-SELECT * FROM productos;
+-- Consultar todos los clientes
+SELECT * 
+FROM clientes;
 
-SELECT * FROM ventas;
+--Consultar todos los registros de ventas
+SELECT * 
+FROM ventas;
+
+-- Consultar clientes que viven en Bogotá
+SELECT * 
+FROM clientes
+WHERE ciudad = 'Bogotá';
+
+-- Consultar productos de la categoría Fragancias
+SELECT * 
+FROM productos
+WHERE categoria = 'Fragancias';
+
+-- Consultar productos con stock mayor a 30
+SELECT * 
+FROM productos
+WHERE stock > 30;
+
+-- Consultar ventas ordenadas por fecha, de la más reciente a la más antigua
+SELECT * 
+FROM ventas
+ORDER BY fecha_venta DESC;
+
+
+
+
 
 
 
