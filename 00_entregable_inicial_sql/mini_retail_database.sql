@@ -7,7 +7,8 @@ CREATE DATABASE mini_retail;
 -- 2. Usar la base de datos
 USE mini_retail;
 
--- 3. Crear tabla de clientes
+-- 3. Crear tablas que estarán presentes en la base de datos
+-- Crear tabla de clientes
 CREATE TABLE clientes (
     id_cliente INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
@@ -17,7 +18,7 @@ CREATE TABLE clientes (
     correo VARCHAR(120)
 );
 
--- 4. Crear tabla de productos
+-- Crear tabla de productos
 CREATE TABLE productos (
     id_producto INT PRIMARY KEY AUTO_INCREMENT,
     nombre_producto VARCHAR(100) NOT NULL,
@@ -26,7 +27,7 @@ CREATE TABLE productos (
     stock INT NOT NULL
 );
 
--- 5. Crear tabla de ventas
+-- Crear tabla de ventas
 CREATE TABLE ventas (
     id_venta INT PRIMARY KEY AUTO_INCREMENT,
     id_cliente INT NOT NULL,
@@ -37,7 +38,8 @@ CREATE TABLE ventas (
     FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
 );
 
--- 6. Ingresar datos a la tabla clientes
+-- 4. Ingresar datos a cada una de las tablas
+-- Ingresar datos a la tabla clientes
 INSERT INTO clientes (nombre, apellido, edad, ciudad, correo) VALUES
 ('Laura', 'Barragán', 27, 'Bogotá', 'lb1999@hotmail.com'),
 ('Carlos', 'Dávila', 28, 'Medellín', 'c.davila@gmail.com'),
@@ -45,17 +47,17 @@ INSERT INTO clientes (nombre, apellido, edad, ciudad, correo) VALUES
 ('Diana', 'Palmeth', 20, 'Soledad', 'diana.palmeth@gmail.com'),
 ('María', 'López', 31, 'Barranquilla', 'maria.lopez@hotmail.es');
 
--- 7. Ingresar datos a la tabla productos
+-- Ingresar datos a la tabla productos
 INSERT INTO productos (nombre_producto, categoria, precio, stock) VALUES
 ('Perfume masculino', 'Fragancias', 50.00, 50),
 ('Perfume femenino', 'Fragancias', 55.50, 50),
 ('Prestobarba', 'Cuidado Corporal', 33.40, 100),
 ('Crema hidratante', 'Cuidado Corporal', 28.90, 30),
 ('Splash corporal', 'Cuidado Corporal', 25.20, 25),
-('Labial', 'Maquillaje', 30.70 60),
+('Labial', 'Maquillaje', 30.70, 60),
 ('Delineador de ojos', 'Maquillaje', 26.30, 20);
 
--- 8. Insertar datos en la tabla venta
+-- Insertar datos en la tabla ventas
 INSERT INTO ventas (id_cliente, id_producto, fecha_venta, cantidad) VALUES
 (1, 2, '2026-05-01', 8),
 (3, 1, '2026-05-02', 6),
@@ -68,7 +70,7 @@ INSERT INTO ventas (id_cliente, id_producto, fecha_venta, cantidad) VALUES
 (1, 6, '2026-05-09', 5),
 (2, 4, '2026-05-10', 2);
 
--- 9. Modificar tabla ventas agregando método de pago
+-- 5. Modificar tabla ventas agregando método de pago
 ALTER TABLE ventas
 ADD metodo_pago VARCHAR(50);
 
@@ -82,7 +84,7 @@ SET metodo_pago =
         WHEN id_venta IN (8, 9) THEN 'Nequi'
     END;
 
--- 10. Consultar básicas
+-- 6. Consultas básicas
 -- Consultar todos los productos
 SELECT * 
 FROM productos;
@@ -115,7 +117,7 @@ SELECT *
 FROM ventas
 ORDER BY fecha_venta DESC;
 
--- 11. Eliminación controlada con DELETE
+-- 7. Eliminación controlada con DELETE
 -- Consultar la venta que será eliminada
 SELECT * 
 FROM ventas
