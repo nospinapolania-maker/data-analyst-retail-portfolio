@@ -115,7 +115,19 @@ SELECT *
 FROM ventas
 ORDER BY fecha_venta DESC;
 
+-- 11. Eliminación controlada con DELETE
+-- Consultar la venta que será eliminada
+SELECT * 
+FROM ventas
+WHERE id_venta = 10;
 
+-- Eliminar una venta registrada por error
+DELETE FROM ventas
+WHERE id_venta = 10;
+
+-- Verificar las ventas restantes
+SELECT * 
+FROM ventas;
 
 
 
