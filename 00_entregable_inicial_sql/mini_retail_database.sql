@@ -131,7 +131,23 @@ WHERE id_venta = 10;
 SELECT * 
 FROM ventas;
 
+-- 8. Consulta con JOIN
+-- Consultar ventas con información del cliente y del producto
 
+SELECT 
+    v.id_venta,
+    c.nombre,
+    c.apellido,
+    p.nombre_producto,
+    p.categoria,
+    v.fecha_venta,
+    v.cantidad,
+    v.metodo_pago
+FROM ventas v
+INNER JOIN clientes c
+ON v.id_cliente = c.id_cliente
+INNER JOIN productos p
+ON v.id_producto = p.id_producto;
 
 
 
