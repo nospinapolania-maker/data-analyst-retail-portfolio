@@ -149,7 +149,25 @@ ON v.id_cliente = c.id_cliente
 INNER JOIN productos p
 ON v.id_producto = p.id_producto;
 
+-- 9. Calcular el total de cada venta
+-- Consultar ventas con información del cliente, producto y valor total
 
+SELECT 
+    v.id_venta,
+    c.nombre,
+    c.apellido,
+    p.nombre_producto,
+    p.categoria,
+    p.precio,
+    v.cantidad,
+    (p.precio * v.cantidad) AS total_venta,
+    v.fecha_venta,
+    v.metodo_pago
+FROM ventas v
+INNER JOIN clientes c
+ON v.id_cliente = c.id_cliente
+INNER JOIN productos p
+ON v.id_producto = p.id_producto;
 
 
 
