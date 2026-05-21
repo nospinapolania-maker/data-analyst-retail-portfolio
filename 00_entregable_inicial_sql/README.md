@@ -54,7 +54,7 @@ La tabla `ventas` utiliza claves foráneas para relacionar cada compra con un cl
 
 ### 1. Tablas creadas
 
-![Tablas creadas](images/01_tablas_creadas.png)
+![Tablas creadas](images/01_tablas_creadas.png.png)
 
 ### 2. Ventas con método de pago
 
