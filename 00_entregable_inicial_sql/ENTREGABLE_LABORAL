@@ -1,0 +1,63 @@
+# Entregable laboral · Mini Retail Database SQL
+
+## 1. Descripción breve del proyecto
+
+Construí una mini base de datos relacional en MySQL para simular ventas de una tienda retail de productos de belleza. El proyecto incluye creación de tablas, inserción de datos, modificación de estructura con `ALTER TABLE`, actualización de registros con `UPDATE` y `CASE`, eliminación controlada con `DELETE`, consultas básicas, `INNER JOIN` y cálculo del total de venta.
+
+---
+
+## 2. Texto para LinkedIn
+
+Hoy terminé mi primer entregable técnico dentro de mi ruta de formación como Data Analyst Jr. con enfoque en Retail Analytics.
+
+Construí una mini base de datos relacional en MySQL para simular ventas de una tienda de productos de belleza.
+
+El proyecto incluye:
+
+✅ Creación de base de datos y tablas  
+✅ Uso de claves primarias y foráneas  
+✅ Inserción de datos  
+✅ Modificación de tabla con `ALTER TABLE`  
+✅ Actualización de registros con `UPDATE` y `CASE`  
+✅ Eliminación controlada con `DELETE`  
+✅ Consultas básicas con `SELECT`, `WHERE` y `ORDER BY`  
+✅ `INNER JOIN` entre clientes, productos y ventas  
+✅ Cálculo del total de venta  
+
+Más que copiar consultas, el objetivo fue comprender cómo se relacionan las tablas y cómo una base de datos puede responder preguntas básicas de negocio.
+
+Proyecto en GitHub: [pegar enlace del entregable]
+
+#SQL #DataAnalytics #MySQL #RetailAnalytics #DataAnalyst #GitHubPortfolio
+
+---
+
+## 3. Bullet para CV
+
+Desarrollé una base de datos relacional en MySQL para simular ventas retail, aplicando claves primarias y foráneas, inserción de datos, modificación de tablas, actualización de registros, eliminación controlada, consultas `JOIN` y cálculo del total de venta.
+
+---
+
+## 4. Versión en inglés para CV
+
+Developed a relational retail database in MySQL to simulate customer, product and sales transactions, applying primary keys, foreign keys, data insertion, `ALTER TABLE`, `UPDATE`, `DELETE`, `INNER JOIN` queries and calculated sales totals.
+
+---
+
+## 5. Explicación para entrevista
+
+Este proyecto fue una práctica inicial de SQL orientada a Retail Analytics. Creé una base de datos llamada `mini_retail` con tres tablas: `clientes`, `productos` y `ventas`. La tabla `ventas` funciona como tabla transaccional y se relaciona con clientes y productos mediante claves foráneas.
+
+Después inserté datos, agregué una columna de método de pago con `ALTER TABLE`, actualicé registros con `UPDATE` y `CASE`, eliminé una venta de forma controlada y finalmente usé `INNER JOIN` para consultar cada venta con información completa del cliente, producto, cantidad, método de pago y valor total.
+
+---
+
+## 6. Habilidades demostradas
+
+- Diseño básico de bases de datos relacionales.
+- Uso de claves primarias y foráneas.
+- Manipulación de datos con SQL.
+- Consultas con filtros y ordenamiento.
+- Relación de tablas mediante `INNER JOIN`.
+- Cálculo de métricas básicas de negocio.
+- Documentación técnica en GitHub.
